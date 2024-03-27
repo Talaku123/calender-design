@@ -1,0 +1,170 @@
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+}
+
+body 
+{
+  align-items: center;
+  background: #ef62da;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 0 10px;
+
+}
+
+.calendar-container {
+	background: #feffff;
+	border-radius: 10px;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  width: 450px;
+}
+
+.calendar-container header {
+  align-items: center;
+	display: flex;
+  justify-content: space-between;
+	padding: 25px 30px 10px;
+	
+}
+
+header .calendar-navigation {
+	display: flex;
+}
+
+header .calendar-navigation span {
+  color: #e6a0a0;
+	cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.9rem;
+  height: 38px;
+	line-height: 38px;
+  margin: 0 1px;
+  user-select: none;
+  text-align: center;
+  width: 38px;
+}
+
+.calendar-navigation span:last-child 
+{
+	margin-right: -10px;
+}
+
+header .calendar-navigation span:hover 
+{
+	background: #7805ec;
+}
+
+header .calendar-current-date
+ {
+  
+	font-weight: 500;
+	font-size: 1.45rem;
+}
+
+.calendar-body 
+{
+	padding: 10px;
+}
+
+.calendar-body ul
+ {
+  display: flex;
+  flex-wrap: wrap;
+	list-style: none;
+	text-align: center;
+}
+
+.calendar-body .calendar-dates 
+{
+ 
+	margin-bottom: 20px;
+}
+
+.calendar-body li 
+{
+  
+  color: #907c09;
+  font-size: 1.07rem;
+	width: calc(100% / 7);
+
+} 
+
+
+.calendar-body .calendar-weekdays li {
+	cursor: default;
+	font-weight: 500;
+}
+
+.calendar-body .calendar-dates li
+ {
+  cursor: pointer;
+	margin-top: 30px;
+	position: relative;
+	z-index: 1;
+	
+}
+
+.calendar-dates li.inactive {
+	color: tomato;
+}
+
+.calendar-dates li.active {
+	color: #ffffff;
+}
+
+.calendar-dates li::before {
+
+	content: "";
+  border-radius: 50%;
+	left: 50%;
+	height: 40px;
+  position: absolute;
+	transform: translate(-50%, -50%);
+  top: 50%;
+  width: 40px;
+  z-index: -1;
+}
+
+.calendar-dates li.active::before {
+	background: #bb9df7;
+}
+
+.calendar-dates li:not(.active):hover::before {
+	background: #131412;
+}
+::placeholder
+{
+  align-items: center ;
+  color: #7b7889 !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+.form-control:focus
+{
+  border: none !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+
+}
+.form-control
+{
+  background-color: rgb(226, 201, 255) !important;
+}
+
+.btn
+{
+  background: #ad0394 !important;
+  color: snow !important;
+  margin-top: 8px;
+  margin-bottom: 7px;
+  width: 100%;
+}
